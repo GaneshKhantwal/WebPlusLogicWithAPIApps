@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPlusLogicWithAPIApps", "WebPlusLogicWithAPIApps\WebPlusLogicWithAPIApps.csproj", "{C7F10215-521E-48ED-AAC0-5C0B37FFC162}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{E27E92C3-8194-4645-B139-0354F9BA5885}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebAppPublishModule.psm1 = PublishScripts\AzureWebAppPublishModule.psm1
+		PublishScripts\Publish-WebApplication.ps1 = PublishScripts\Publish-WebApplication.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{E720F534-28D2-4B87-A51E-19C1A47B17FC}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\WebPlusLogicWithAPIApps-WAWS-dev.json = PublishScripts\Configurations\WebPlusLogicWithAPIApps-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7F10215-521E-48ED-AAC0-5C0B37FFC162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F10215-521E-48ED-AAC0-5C0B37FFC162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F10215-521E-48ED-AAC0-5C0B37FFC162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F10215-521E-48ED-AAC0-5C0B37FFC162}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E720F534-28D2-4B87-A51E-19C1A47B17FC} = {E27E92C3-8194-4645-B139-0354F9BA5885}
+	EndGlobalSection
+EndGlobal
