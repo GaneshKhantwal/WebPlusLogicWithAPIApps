@@ -20,8 +20,9 @@ namespace WebPlusLogicWithAPIApps.Business
             paramList.Add(new SqlParameter() { ParameterName = "@DeliveryState", SqlValue = orderEntity.DeliveryState });
             paramList.Add(new SqlParameter() { ParameterName = "@DeliveryPostalCode", SqlValue = orderEntity.DeliveryPostalCode });
             paramList.Add(new SqlParameter() { ParameterName = "@Phone", SqlValue = orderEntity.Phone});
+            paramList.Add(new SqlParameter() { ParameterName = "@OrderId", SqlValue = orderEntity.Phone,Direction=System.Data.ParameterDirection.Output });
 
-            int result = SqlHelper.ExecuteNonQuery(DBConnection.ConnectionString,System.Data.CommandType.StoredProcedure,"usp_CreateOrder",paramList.ToArray());
+            int result = SqlHelper.ExecuteNonQuery(DBConnection.ConnectionString, System.Data.CommandType.StoredProcedure, "usp_CreateOrder", paramList.ToArray());
             
             return new BusinessResult(){ISuccess=true,Code="S",Message="Order Created Successfully."};
         }
