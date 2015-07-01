@@ -4,6 +4,8 @@ namespace WebPlusLogicWithAPIApps.Models
 {
     public class OrderViewModels
     {
+            [Display(Name = "Rose")]
+            public string FlowerName { get; set; }
             [Required]
             [Display(Name = "Recipient Name")]
             public string RecipientName { get; set; }
