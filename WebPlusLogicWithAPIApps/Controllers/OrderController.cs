@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebPlusLogicWithAPIApps.Entity;
+using WebPlusLogicWithAPIApps.Models;
 
 namespace WebPlusLogicWithAPIApps.Controllers
 {
@@ -12,7 +14,8 @@ namespace WebPlusLogicWithAPIApps.Controllers
         // GET: /Order/
         public ActionResult Index()
         {
-            return View();
+            OrderViewModels model = new OrderViewModels();
+            return View(model);
         }
 
         //
@@ -36,7 +39,13 @@ namespace WebPlusLogicWithAPIApps.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
+                OrderEntity orderEntity = new OrderEntity();
+                orderEntity.RecipientName = collection["RecipientName"];
+                orderEntity.DeliveryStreet = collection["DeliveryStreet"];
+                orderEntity.DeliveryCity = collection["DeliveryCity"];
+                orderEntity.DeliveryState = collection["DeliveryState"];
+                orderEntity.DeliveryPostalCode = collection["DeliveryPostalCode"];
+                orderEntity.Phone = collection["Phone"];
 
                 return RedirectToAction("Index");
             }
