@@ -234,6 +234,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebPlusLogicWithAPIApps.Business\WebPlusLogicWithAPIApps.Business.csproj">
+      <Project>{60020956-8b7a-4f2a-b14e-750cfc32f520}</Project>
+      <Name>WebPlusLogicWithAPIApps.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebPlusLogicWithAPIApps.Entity\WebPlusLogicWithAPIApps.Entity.csproj">
       <Project>{4a53f113-2030-4a67-bf9b-3133c8c5958e}</Project>
       <Name>WebPlusLogicWithAPIApps.Entity</Name>

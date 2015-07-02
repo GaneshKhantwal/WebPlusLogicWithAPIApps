@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebPlusLogicWithAPIApps.Business;
 using WebPlusLogicWithAPIApps.Entity;
 using WebPlusLogicWithAPIApps.Models;
 
@@ -47,9 +48,12 @@ namespace WebPlusLogicWithAPIApps.Controllers
                 orderEntity.DeliveryPostalCode = collection["DeliveryPostalCode"];
                 orderEntity.Phone = collection["Phone"];
 
+                OrderBusiness orderbusiness = new OrderBusiness();
+                orderbusiness.Create(orderEntity);
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
                 return View();
             }
