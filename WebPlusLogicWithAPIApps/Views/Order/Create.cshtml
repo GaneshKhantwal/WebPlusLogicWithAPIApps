@@ -1,0 +1,22 @@
+﻿@model WebPlusLogicWithAPIApps.Models.CreateViewModel
+@{
+    ViewBag.Title = "Order Error";
+}
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+       @Html.ValidationMessageFor(model => model.Error)
+    <P>@Html.EditorFor(model => model.Error, new { @class = "control-label col-md-2" })</P>
+    </div>
+</body>
+</html>

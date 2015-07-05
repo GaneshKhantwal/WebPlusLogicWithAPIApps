@@ -47,7 +47,7 @@ namespace WebPlusLogicWithAPIApps.Controllers
                 orderEntity.DeliveryState = collection["DeliveryState"];
                 orderEntity.DeliveryPostalCode = collection["DeliveryPostalCode"];
                 orderEntity.Phone = collection["Phone"];
-
+                orderEntity.Email = collection["Email"];
                 OrderBusiness orderbusiness = new OrderBusiness();
                 orderbusiness.Create(orderEntity);
 
@@ -55,7 +55,9 @@ namespace WebPlusLogicWithAPIApps.Controllers
             }
             catch(Exception ex)
             {
-                return View();
+                CreateViewModel model = new CreateViewModel();
+                model.Error = ex.Message;
+                return View(model);
             }
         }
 

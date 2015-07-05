@@ -26,5 +26,9 @@ namespace WebPlusLogicWithAPIApps.Models
             [Display(Name = "Phone")]
             public string Phone { get; set; }
 
+            [Required]
+            [Display(Name = "Email")]
+            public string Email { get; set; }
+
     }
 }
